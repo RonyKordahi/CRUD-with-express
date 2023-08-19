@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add person</title>
+</head>
+<body>
+    <form method="post" action="/people/edit">
+
+        <label for="name">Name: </label>
+        <input name="name" type="text" id="name" value="<%= person.name %>" />
+        
+        <label for="age">Age: </label>
+        <input name="age" type="text" id="age" value="<%= person.age %>" />
+        
+        <label for="hobby">Hobby: </label>
+        <input name="hobby" type="text" id="hobby" value="<%= person.hobby %>" />
+
+        <input type="hidden" name="id" value="<%= person.id %>" />
+
+        <button type="submit">Submit</button>
+
+    </form>
+
+    <a href="http://localhost:8000/people/">Cancel</a>
+</body>
+</html>
